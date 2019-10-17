@@ -1,7 +1,11 @@
-module.exports = (department) => {
-    return (req, res, next)  => {
-        if(department === req.user.department) {//check the role matches user
-            next();
-    } res.status(403).json({ you: "you do not have clearance" })
-}
-}
+module.exports = department => {
+    return (req, res, next) => {
+
+      if (department === req.user.department) {
+        next();
+      } else {
+        res.status(403).json({ you: "can't touch this" });
+      }
+    };
+  };
+  

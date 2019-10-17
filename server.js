@@ -1,6 +1,6 @@
 const express = require('express');
 const server = express();
-const usersRouter = require('./api/users/user-router.js/index.js');
+const usersRouter = require('./api/users/user-router.js');
 const helmet = require('helmet');
 const cors = require('cors');
 
